@@ -2,20 +2,20 @@ package frolov;
 
 
 public class Human {
-    String name;
-    int age;
-    String sex;
-    String favoriteAnimal;
-    boolean aboba;
+    private String name;
+    private int age;
+    private String sex;
+    private String favoriteAnimal;
+    private boolean isAboba;
 
     public void eat() {
         System.out.println(this.name + " поел. Теперь он - абоба!");
-        this.aboba = true;
+        this.isAboba = true;
     }
 
     public void sleep() {
         System.out.println(this.name + " поспал. Теперь он - не абоба!");
-        this.aboba = false;
+        this.isAboba = false;
     }
 
     public String getName() {
@@ -50,14 +50,11 @@ public class Human {
         this.favoriteAnimal = favoriteAnimal;
     }
 
-    public String getAboba() {
-        if (this.aboba) {
-            return this.name + " является абобой";
-        }
-        return this.name + " не является абобой";
+    public boolean isAboba() {
+        return this.isAboba;
     }
 
-    public void setAboba(String aboba) {
-        this.aboba = aboba.equals("aboba");
+    public void setAboba(boolean isAboba) {
+        this.isAboba = isAboba;
     }
 }

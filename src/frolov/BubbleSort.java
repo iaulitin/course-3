@@ -6,23 +6,25 @@ import java.util.Random;
 public class BubbleSort {
 
     public static void main(String[] args) {
-        int[] initialArr = getArray();
+        int[] initialArr = generateArray();
         System.out.println("Массив до сортировки: " + Arrays.toString(initialArr));
-        int[] sortedArr = sortingArr(initialArr);
+        int[] sortedArr = sortArr(initialArr);
         System.out.println("Массив после сортировки: " + Arrays.toString(sortedArr));
     }
 
-    static int[] getArray() {
+    static int[] generateArray() {
         Random randomNum = new Random();
-        int[] myArray = new int[10];
+        int arrayLen = 10;
+        int[] myArray = new int[arrayLen];
+        int randomRange = 10;
 
         for (int i = 0; i < myArray.length; i++) {
-            myArray[i] = randomNum.nextInt(10);
+            myArray[i] = randomNum.nextInt(randomRange);
         }
         return myArray;
     }
 
-    static int[] sortingArr(int[] myArr) {
+    static int[] sortArr(int[] myArr) {
         int arrLen = myArr.length;
         for (int i = 0; i < arrLen; i++) {
             for (int j = i + 1; j < arrLen; j++) {
