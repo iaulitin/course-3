@@ -15,13 +15,13 @@ public class BubbleSort {
     static int[] generateArray() {
         Random randomNum = new Random();
         int arrayLen = 10;
-        int[] myArray = new int[arrayLen];
+        int[] myArr = new int[arrayLen];
         int randomRange = 10;
 
-        for (int i = 0; i < myArray.length; i++) {
-            myArray[i] = randomNum.nextInt(randomRange);
+        for (int i = 0; i < myArr.length; i++) {
+            myArr[i] = randomNum.nextInt(randomRange);
         }
-        return myArray;
+        return myArr;
     }
 
     static int[] sortArr(int[] myArr) {
