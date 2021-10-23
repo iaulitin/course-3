@@ -1,11 +1,20 @@
-package Army;
+package army;
 
 class Unit {
-    private int hp;
-    private int atk;
-    private double armor;
-    private String name;
-    private boolean isAlive;
+    protected int hp;
+    protected int atk;
+    protected double armor;
+    protected String name;
+    protected boolean isAlive;
+
+    Unit (int atk, double armor, String name){
+        this.hp = 100;
+        this.atk = atk;
+        this.armor = armor;
+        this.name = name;
+        this.isAlive = true;
+    }
+
 
     public int getHp() {
         return hp;
@@ -35,7 +44,7 @@ class Unit {
         this.name = name;
     }
 
-    public boolean getAlive() {
+    public boolean isAlive() {
         return isAlive;
     }
     public void setAlive(boolean isAlive) {
