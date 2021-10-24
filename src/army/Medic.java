@@ -1,8 +1,8 @@
 package army;
 
 class Medic extends Unit {
-    Medic(int atk, double armor, String name) {
-        super(atk, armor, name);
+    Medic(double armor, String name) {
+        super(armor, name);
     }
 
     @Override

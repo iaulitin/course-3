@@ -2,7 +2,8 @@ package army;
 
 public class Soldier extends Unit {
     Soldier(int atk, double armor, String name) {
-        super(atk, armor, name);
+        super(armor, name);
+        this.atk = atk;
     }
 
     @Override
@@ -13,6 +14,10 @@ public class Soldier extends Unit {
 
     @Override
     void attack(Unit target) {
+        if (atk<=0){
+            System.out.println(name + " не может атаковать");
+            return;
+        }
         if (!isAlive) {
             System.out.println(name + " не может атаковать, так как мёртв(а) ");
             return;
@@ -25,7 +30,7 @@ public class Soldier extends Unit {
 
         System.out.println(name + " стреляет по " + target.name + " и наносит " + atk + " урона ");
         target.setHp((int) (target.hp - atk * (1 - target.armor)));
-        target.status(this);
+        target.status(target);
         if (target.isAlive) {
             System.out.println("У " + target.name + " осталось " + target.hp + " здоровья");
         }

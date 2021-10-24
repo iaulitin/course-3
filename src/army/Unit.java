@@ -7,9 +7,9 @@ class Unit {
     protected String name;
     protected boolean isAlive;
 
-    Unit (int atk, double armor, String name){
+    Unit (double armor, String name){
         this.hp = 100;
-        this.atk = atk;
+        this.atk = 0;
         this.armor = armor;
         this.name = name;
         this.isAlive = true;
